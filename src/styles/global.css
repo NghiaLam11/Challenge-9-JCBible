@@ -1,0 +1,28 @@
+.wrapper {
+  width: 100%;
+}
+.container {
+  max-width: 1264px;
+  margin: 0 auto;
+}
+.multiline-ellipsis-1 {
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: pre-wrap;
+}
+.multiline-ellipsis-2 {
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: pre-wrap;
+}
+.multiline-ellipsis-4 {
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: pre-wrap;
+}
