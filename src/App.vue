@@ -1,10 +1,14 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div>
+  <div class="app dark">
     <RouterView />
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.app {
+  color: var(--text-color);
+  background-color: var(--bg-primary);
+}
+</style>
