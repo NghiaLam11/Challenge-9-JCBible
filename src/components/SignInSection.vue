@@ -2,7 +2,6 @@
 import { ref } from "vue";
 const passwordElement = ref();
 const password = ref("");
-const name = ref("");
 const email = ref("");
 const onShowPassword = () => {
   if (passwordElement.value.type === "password") {
@@ -11,11 +10,10 @@ const onShowPassword = () => {
     passwordElement.value.type = "password";
   }
 };
-const onFacebookSignup = () => {};
-const onGoogleSignup = () => {};
-const onSignup = () => {
+const onFacebookSignin = () => {};
+const onGoogleSignin = () => {};
+const onSignin = () => {
   const value = {
-    name: name.value,
     password: password.value,
     email: email.value,
   };
@@ -24,19 +22,9 @@ const onSignup = () => {
 </script>
 
 <template>
-  <div class="container signup">
-    <form @submit.prevent="onSignup">
-      <h3>Đăng ký</h3>
-      <div class="form-group">
-        <label for="name">Tên</label>
-        <input
-          v-model="name"
-          type="text"
-          class="name"
-          placeholder="Đặt tên..."
-          required
-        />
-      </div>
+  <div class="container signin">
+    <form @submit.prevent="onSignin">
+      <h3>Đăng nhập</h3>
       <div class="form-group">
         <label for="email">Email</label>
         <input
@@ -63,21 +51,21 @@ const onSignup = () => {
           >
         </div>
       </div>
-      <RouterLink to="/sign-in">Tôi đã có tài khoản!</RouterLink>
-      <button type="submit">Đăng ký</button>
+      <RouterLink to="/sign-up">Tôi chưa có tài khoản!</RouterLink>
+      <button type="submit">Đăng nhập</button>
     </form>
     <div class="others">
       <p>______or______</p>
       <div class="btn-group">
-        <button @click="onGoogleSignup">Google</button>
-        <button @click="onFacebookSignup">Facebook</button>
+        <button @click="onGoogleSignin">Google</button>
+        <button @click="onFacebookSignin">Facebook</button>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.signup {
+.signin {
   display: flex;
   flex-direction: column;
   align-items: center;
