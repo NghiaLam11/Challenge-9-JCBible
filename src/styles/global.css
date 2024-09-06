@@ -1,3 +1,7 @@
+html {
+  color: var(--text-color);
+  background-color: var(--bg-primary);
+}
 body {
   font-family: var(--font-primary);
 }

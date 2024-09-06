@@ -1,14 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HeaderSection from "./components/HeaderSection.vue";
+</script>
 
 <template>
-  <div class="app dark">
+  <div class="app">
+    <HeaderSection></HeaderSection>
     <RouterView />
   </div>
 </template>
 
-<style scoped>
-.app {
-  color: var(--text-color);
-  background-color: var(--bg-primary);
-}
-</style>
+<style scoped></style>
