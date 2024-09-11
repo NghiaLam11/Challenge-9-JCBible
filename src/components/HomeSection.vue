@@ -1,11 +1,11 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div>
-    THIS IS HOME
-  </div>
+  <section class="home">THIS IS HOME</section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.home {
+  min-height: 150vh;
+}
+</style>

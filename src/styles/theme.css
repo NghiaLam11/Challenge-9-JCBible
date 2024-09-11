@@ -18,6 +18,7 @@
   --warning-color: #f59e0b;
   --error-color: #dc2626;
   --infor-color: #38bdf8;
+  --border-radius: 3px;
   --font-primary: "Cabin", sans-serif;
   --font-sans: "Inconsolata", monospace;
 }
