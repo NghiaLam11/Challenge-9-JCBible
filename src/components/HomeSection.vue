@@ -1,7 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import WelcomeToSection from "./SignupChilds/WelcomeToSection.vue";
+</script>
 
 <template>
-  <section class="home">THIS IS HOME</section>
+  <section class="home">
+    <WelcomeToSection></WelcomeToSection>
+  </section>
 </template>
 
 <style scoped>

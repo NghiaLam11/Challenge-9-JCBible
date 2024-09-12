@@ -14,31 +14,41 @@
           <span>JCBIBLE</span>
         </div>
         <ul class="nav-list">
-          <li><RouterLink to="">HOME</RouterLink></li>
-          <li><RouterLink to="">BIBLE</RouterLink></li>
-          <li><RouterLink to="">MINDMAPS</RouterLink></li>
-          <li><RouterLink to="">NOTES</RouterLink></li>
-          <li><RouterLink to="">LESSONS</RouterLink></li>
+          <li><RouterLink to="/">TRANG CHỦ</RouterLink></li>
+          <li><RouterLink to="/bible">KINH THÁNH</RouterLink></li>
+          <li><RouterLink to="/mindmaps">BIỂU ĐỒ</RouterLink></li>
+          <li><RouterLink to="/notes">GHI CHÚ</RouterLink></li>
+          <li><RouterLink to="/lessons">BÀI HỌC</RouterLink></li>
         </ul>
         <div class="nav-more">
           <i class="fas fa-bars"></i>
           <ul class="hidden-nav">
             <li>
-              <RouterLink to=""
+              <RouterLink to="/profile"
                 ><img
                   src="../images/710080731381b1dfe890 (1).jpg"
                   alt="avatar"
                 /><span>Lam Nghia <br />&#127793;</span></RouterLink
               >
             </li>
-            <li><RouterLink to="">Profile</RouterLink></li>
-            <li class="item-mobile"><RouterLink to="">Home</RouterLink></li>
-            <li class="item-mobile"><RouterLink to="">Bible</RouterLink></li>
-            <li class="item-mobile"><RouterLink to="">Mindmaps</RouterLink></li>
-            <li class="item-mobile"><RouterLink to="">Notes</RouterLink></li>
-            <li class="item-mobile"><RouterLink to="">Lessons</RouterLink></li>
-            <li><RouterLink to="">Settings</RouterLink></li>
-            <li><RouterLink to="">Sign out</RouterLink></li>
+            <li><RouterLink to="/profile">Hồ sơ</RouterLink></li>
+            <li class="item-mobile">
+              <RouterLink to="/">Trang chủ</RouterLink>
+            </li>
+            <li class="item-mobile">
+              <RouterLink to="/bible">Kinh Thánh</RouterLink>
+            </li>
+            <li class="item-mobile">
+              <RouterLink to="/mindmaps">Biểu đồ</RouterLink>
+            </li>
+            <li class="item-mobile">
+              <RouterLink to="/notes">Ghi chú</RouterLink>
+            </li>
+            <li class="item-mobile">
+              <RouterLink to="/lessons">Bài học</RouterLink>
+            </li>
+            <li><RouterLink to="/settings">Cài đặt</RouterLink></li>
+            <li><a>Đăng xuất</a></li>
           </ul>
         </div>
       </nav>
@@ -75,7 +85,7 @@ nav .logo img {
   width: 50px;
 }
 nav .logo span {
-  font-family: monospace;
+  font-family: var(--font-mono);
   font-size: 1.4rem;
   transform: translateX(-7px);
 }
@@ -115,7 +125,7 @@ nav .nav-more ul {
   background-color: var(--bg-primary);
   padding: 1rem;
   border-radius: var(--border-radius);
-  box-shadow: 1px 0 10px 1px var(--blur-color);
+  box-shadow: var(--shadow-box);
   display: flex;
   flex-direction: column;
   width: 30vw;
@@ -158,7 +168,12 @@ nav .nav-more ul li:last-child a:hover {
 nav .nav-more:hover .hidden-nav {
   transform: scaleX(1) scaleY(1);
 }
-@media screen and (max-width: 638px) {
+@media screen and (min-width: 1260px) {
+  nav .nav-more ul {
+    width: 20vw;
+  }
+}
+@media screen and (max-width: 738px) {
   nav ul {
     display: none;
   }

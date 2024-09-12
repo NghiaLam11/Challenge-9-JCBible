@@ -9,7 +9,6 @@
   --bg-primary: #0f172a;
   --bg-secondary: #020617;
   --border-color: #cbd5e1;
-
 }
 :root {
   --blur-color: rgb(15, 23, 42, 0.2);
@@ -20,5 +19,6 @@
   --infor-color: #38bdf8;
   --border-radius: 3px;
   --font-primary: "Cabin", sans-serif;
-  --font-sans: "Inconsolata", monospace;
+  --font-mono: "Inconsolata", monospace;
+  --shadow-box: 1px 0 10px 1px var(--blur-color);
 }

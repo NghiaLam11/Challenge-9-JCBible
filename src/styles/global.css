@@ -12,6 +12,10 @@ body {
   max-width: 1264px;
   margin: 0 auto;
 }
+.router-link-active {
+  color: var(--link-color) !important;
+  font-weight: 700;
+}
 .multiline-ellipsis-1 {
   -webkit-line-clamp: 1;
   overflow: hidden;
