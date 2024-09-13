@@ -8,7 +8,7 @@ const onClose = () => {
 </script>
 
 <template>
-  <div class="welcome-back" v-if="!isDisplay">
+  <div class="welcome-back" v-if="isDisplay">
     <div @click="onClose" class="blur"></div>
     <div class="content container">
       <i @click="onClose" class="fas fa-minus"></i>

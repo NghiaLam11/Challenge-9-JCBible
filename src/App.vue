@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import HeaderSection from "./components/HeaderSection.vue";
+import FooterSection from "./components/FooterSection.vue";
 
 onMounted(() => {
   // POSITION FIXED NAVBAR ELEMENT ------------------------------------------------
@@ -24,6 +25,7 @@ onMounted(() => {
   <div class="app">
     <HeaderSection></HeaderSection>
     <RouterView />
+    <FooterSection></FooterSection>
   </div>
 </template>
 
