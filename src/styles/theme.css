@@ -3,15 +3,20 @@
   --bg-primary: #f8fafc;
   --bg-secondary: #f1f5f9;
   --border-color: #475569;
+  --blur-color: rgb(15, 23, 42, 0.2);
+  --filter-inverted: invert(0%);
+  --shadow-box: 1px 0 10px 1px var(--blur-color);
 }
 .dark {
   --text-color: #f8fafc;
   --bg-primary: #0f172a;
-  --bg-secondary: #020617;
+  --bg-secondary: rgb(2, 6, 23);
   --border-color: #cbd5e1;
+  --blur-color: rgb(2, 6, 23, 0.3);
+  --filter-inverted: invert(100%);
+  --shadow-box: 1px 0 10px 1px var(--blur-color);
 }
 :root {
-  --blur-color: rgb(15, 23, 42, 0.2);
   --success-color: #4ade80;
   --link-color: #34d399;
   --warning-color: #f59e0b;
@@ -20,5 +25,4 @@
   --border-radius: 3px;
   --font-primary: "Cabin", sans-serif;
   --font-mono: "Inconsolata", monospace;
-  --shadow-box: 1px 0 10px 1px var(--blur-color);
 }

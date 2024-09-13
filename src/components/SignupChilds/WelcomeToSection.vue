@@ -8,17 +8,23 @@ const onClose = () => {
 </script>
 
 <template>
-  <div class="welcome-to" v-if="!isDisplay">
+  <div class="welcome-to" v-if="isDisplay">
     <div @click="onClose" class="blur"></div>
     <div class="content container">
       <i @click="onClose" class="fas fa-minus"></i>
-      <h3>Chào mừng bạn đến với <b class="brand">JCBIBLE</b>!</h3>
-      <p>
-        <b class="brand">JCBIBLE</b> là một trang học Lời Chúa được phát triển
-        bởi những người trẻ của CHÚA với mong ước hết thảy quý con cái CHÚA được
-        tiếp cận với việc học lời CHÚA dễ dàng hơn và tiện lợi hơn.
-      </p>
-      <button>Đọc thêm</button>
+      <div class="illustration">
+        <img src="/src/images/book (2).png" alt="" />
+      </div>
+      <div>
+        <h3>Chào mừng bạn đến với <b class="brand">JCBIBLE</b>&#128512;!</h3>
+        <p class="multiline-ellipsis-4">
+          <b class="brand">JCBIBLE</b> là một trang học Lời Chúa được phát triển
+          bởi những người trẻ của CHÚA với mong ước hết thảy quý con cái CHÚA
+          được tiếp cận với việc học lời CHÚA dễ dàng hơn và tiện lợi hơn
+          &#128519;.
+        </p>
+        <button>Khám phá</button>
+      </div>
     </div>
   </div>
 </template>
@@ -44,13 +50,22 @@ const onClose = () => {
   background-color: var(--blur-color);
 }
 .welcome-to .content {
-  width: 50vw;
+  width: 70vw;
   position: absolute;
+  display: flex;
+  align-items: center;
   z-index: 20;
   background-color: var(--bg-primary);
   padding: 2rem 1rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-box);
+}
+.welcome-to .content .illustration {
+  padding-right: 1rem;
+}
+.welcome-to .content .illustration img {
+  filter: var(--filter-inverted);
+  transform: rotateY(-180deg);
 }
 .welcome-to .content .brand {
   font-family: var(--font-mono);
@@ -78,7 +93,7 @@ const onClose = () => {
 }
 .welcome-to .content p {
   line-height: 1.4rem;
-  padding: 0.5rem 0;
+  margin: 0.5rem 0;
 }
 .welcome-to .content button {
   font-size: 0.8rem;
@@ -88,16 +103,18 @@ const onClose = () => {
   cursor: pointer;
   transition: all 0.2s linear;
   border-radius: var(--border-radius);
+  background-color: var(--bg-primary);
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--link-color);
 }
 .welcome-to .content button:hover {
   background-color: var(--success-color);
+  border: 1px solid var(--success-color);
   color: white;
 }
 @media screen and (max-width: 768px) {
   .welcome-to .content {
-    width: 80vw;
+    width: 90vw;
   }
 }
 </style>
