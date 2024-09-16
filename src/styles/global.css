@@ -30,6 +30,13 @@ body {
   -webkit-box-orient: vertical;
   white-space: pre-wrap;
 }
+.multiline-ellipsis-3 {
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: pre-wrap;
+}
 .multiline-ellipsis-4 {
   -webkit-line-clamp: 4;
   overflow: hidden;
