@@ -44,7 +44,7 @@
 
 <style scoped>
 footer {
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: var(--bg-secondary);
   box-shadow: var(--shadow-box);
 }

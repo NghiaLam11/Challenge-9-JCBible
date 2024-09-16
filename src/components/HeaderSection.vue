@@ -71,6 +71,7 @@
 .navbar {
   background-color: var(--bg-secondary);
   box-shadow: var(--shadow-box);
+  z-index: 99;
 }
 nav {
   display: flex;
