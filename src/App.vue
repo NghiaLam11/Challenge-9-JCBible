@@ -2,7 +2,7 @@
 import { onMounted } from "vue";
 import HeaderSection from "./components/HeaderSection.vue";
 import FooterSection from "./components/FooterSection.vue";
-
+import AlertSection from "./reusables/AlertSection.vue";
 onMounted(() => {
   // POSITION FIXED NAVBAR ELEMENT ------------------------------------------------
   const navbarElement: any = document.querySelector(".navbar");
@@ -24,6 +24,7 @@ onMounted(() => {
 <template>
   <div class="app">
     <HeaderSection></HeaderSection>
+    <AlertSection></AlertSection>
     <RouterView />
     <FooterSection></FooterSection>
   </div>
