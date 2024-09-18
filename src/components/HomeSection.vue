@@ -3,6 +3,7 @@ import WelcomeToSection from "./SignupChilds/WelcomeToSection.vue";
 import WelcomeBackSection from "./SigninChilds/WelcomeBackSection.vue";
 import HeroSection from "./HomeChilds/HeroSection.vue";
 import OutstandingSection from "./HomeChilds/OutstandingSection.vue";
+import VerseSection from "./HomeChilds/VerseSection.vue";
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import OutstandingSection from "./HomeChilds/OutstandingSection.vue";
     <WelcomeBackSection></WelcomeBackSection>
     <HeroSection></HeroSection>
     <OutstandingSection></OutstandingSection>
+    <VerseSection></VerseSection>
   </section>
 </template>
 
