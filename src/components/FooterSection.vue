@@ -8,7 +8,9 @@
           <img src="../images/webicon.png" alt="" />
           <span>JCBIBLE</span>
         </div>
-        <p class="quote">Lời CHÚA là ngọn đèn cho chơn tôi, ánh sáng cho đường lối tôi.</p>
+        <p class="quote">
+          Lời CHÚA là ngọn đèn cho chơn tôi, ánh sáng cho đường lối tôi.
+        </p>
       </div>
 
       <div class="footer-list">
@@ -44,16 +46,16 @@
 
 <style scoped>
 footer {
-  padding: 1.5rem;
+  padding: 2rem 1.5rem 7rem 1.5rem;
   background-color: var(--bg-secondary);
   box-shadow: var(--shadow-box);
 }
 footer p.quote {
-    padding-left: 0.5rem;
-    font-family: var(--font-mono);
-    font-style: italic;
-    font-weight: 900;
-    color: var(--warning-color);
+  padding-left: 0.5rem;
+  font-family: var(--font-mono);
+  font-style: italic;
+  font-weight: 900;
+  color: var(--warning-color);
 }
 footer .logo {
   display: flex;

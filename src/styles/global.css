@@ -16,6 +16,9 @@ body {
   color: var(--link-color) !important;
   font-weight: 700;
 }
+.carousel__icon {
+  color: var(--text-color) !important;
+}
 .multiline-ellipsis-1 {
   -webkit-line-clamp: 1;
   overflow: hidden;
