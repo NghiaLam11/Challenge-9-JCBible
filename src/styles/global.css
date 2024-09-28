@@ -19,6 +19,9 @@ body {
 .carousel__icon {
   color: var(--text-color) !important;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 .multiline-ellipsis-1 {
   -webkit-line-clamp: 1;
   overflow: hidden;

@@ -16,7 +16,7 @@
         <ul class="nav-list">
           <li><RouterLink to="/">TRANG CHỦ</RouterLink></li>
           <li><RouterLink to="/bible">KINH THÁNH</RouterLink></li>
-          <li><RouterLink to="/mindmaps">BIỂU ĐỒ</RouterLink></li>
+          <li><RouterLink to="/charts">BIỂU ĐỒ</RouterLink></li>
           <li><RouterLink to="/notes">GHI CHÚ</RouterLink></li>
           <li><RouterLink to="/lessons">BÀI HỌC</RouterLink></li>
         </ul>

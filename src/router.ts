@@ -5,6 +5,7 @@ import AboutView from "./views/AboutView.vue";
 import SignUpView from "./views/SignUpView.vue";
 import SignInView from "./views/SignInView.vue";
 import BibleView from "./views/BibleView.vue";
+import ChartView from "./views/ChartView.vue";
 
 const routes = [
   { path: "/", component: HomeView },
@@ -12,6 +13,7 @@ const routes = [
   { path: "/sign-up", component: SignUpView },
   { path: "/sign-in", component: SignInView },
   { path: "/bible", component: BibleView },
+  { path: "/charts", component: ChartView },
 ];
 
 const router = createRouter({
