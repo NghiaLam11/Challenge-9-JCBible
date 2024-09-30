@@ -124,6 +124,7 @@ nav .nav-more ul {
   position: absolute;
   right: 0;
   padding: 0;
+  z-index: 20;
   background-color: var(--bg-primary);
   padding: 1rem;
   border-radius: var(--border-radius);

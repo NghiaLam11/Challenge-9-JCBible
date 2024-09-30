@@ -1,14 +1,47 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { onMounted } from "vue";
+
+function openCity(evt: Event, cityName: any) {
+  // Declare all variables
+  var i: any, tabcontent: any, tablinks: any;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  const idContentTab: any = document.getElementById(cityName);
+  const eventTargetTab: any = evt?.currentTarget;
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  idContentTab.style.display = "flex";
+  eventTargetTab.className += " active";
+}
+onMounted(() => {});
+</script>
 
 <template>
   <div class="charts container">
     <div class="cate">
-      <ul class="cate-list">
-        <li>Tất cả</li>
-        <li>Biểu đồ tư duy</li>
-        <li>Biểu đồ thời gian</li>
-        <li>Biểu đồ tròn</li>
-        <li>Biểu đồ cột</li>
+      <ul class="cate-list tab">
+        <li class="tablinks active" @click="openCity($event, 'All')">Tất cả</li>
+        <li class="tablinks" @click="openCity($event, 'Mindmaps')">
+          Biểu đồ tư duy
+        </li>
+        <li class="tablinks" @click="openCity($event, 'Timeline')">
+          Biểu đồ thời gian
+        </li>
+        <li class="tablinks" @click="openCity($event, 'Circle')">
+          Biểu đồ tròn
+        </li>
+        <li class="tablinks" @click="openCity($event, 'Column')">
+          Biểu đồ cột
+        </li>
       </ul>
     </div>
     <!-- <div class="nothing">
@@ -17,14 +50,22 @@
       <button>Thêm biểu đồ</button>
     </div> -->
     <div class="store">
-      <ul class="cate-mobile">
-        <li>Tất cả</li>
-        <li>Biểu đồ tư duy</li>
-        <li>Biểu đồ thời gian</li>
-        <li>Biểu đồ tròn</li>
-        <li>Biểu đồ cột</li>
+      <ul class="cate-mobile tab">
+        <li class="tablinks active" @click="openCity($event, 'All')">Tất cả</li>
+        <li class="tablinks" @click="openCity($event, 'Mindmaps')">
+          Biểu đồ tư duy
+        </li>
+        <li class="tablinks" @click="openCity($event, 'Timeline')">
+          Biểu đồ thời gian
+        </li>
+        <li class="tablinks" @click="openCity($event, 'Circle')">
+          Biểu đồ tròn
+        </li>
+        <li class="tablinks" @click="openCity($event, 'Column')">
+          Biểu đồ cột
+        </li>
       </ul>
-      <div class="store-list">
+      <div class="store-list tabcontent" id="All">
         <div class="item" v-for="n in 5" :key="n">
           <iframe
             src="http://localhost:5173/charts"
@@ -36,11 +77,30 @@
           </h5>
         </div>
       </div>
+      <div class="store-list tabcontent" id="Mindmaps">
+        <div class="item" v-for="n in 5" :key="n">
+          <iframe
+            src="http://localhost:5173/charts"
+            title="W3Schools Free Online Web Tutorials"
+            allowpaymentrequest="true"
+          ></iframe>
+          <h5 class="multiline-ellipsis-1">
+            W2Schools Free Online Web Tutorials 2
+          </h5>
+        </div>
+      </div>
+      <div class="store-list tabcontent" id="Timeline">Timeline empty</div>
+      <div class="store-list tabcontent" id="Circle">Circle empty</div>
+      <div class="store-list tabcontent" id="Column">Column empty</div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.active {
+  color: var(--success-color);
+  font-weight: bold;
+}
 .charts {
   display: flex;
   margin-top: 0.5rem;
@@ -87,6 +147,12 @@
   flex-wrap: wrap;
   padding: 1rem;
 }
+.tabcontent {
+  display: none;
+}
+#All {
+  display: flex;
+}
 .store-list .item {
   width: calc(100% / 3);
   padding: 1rem 0.3rem;
@@ -98,6 +164,9 @@
 }
 .store-list .item h5 {
   font-size: 1rem;
+}
+.store-list .item:hover h5 {
+  color: var(--success-color);
 }
 .store .cate-mobile {
   display: none;
