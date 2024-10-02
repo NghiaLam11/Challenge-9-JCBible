@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-
-function openCity(evt: Event, cityName: any) {
+import { ref } from "vue";
+import NoteFormSection from "./NotesSection/NoteFormSection.vue";
+function toggleTabs(evt: Event, cityName: any) {
   // Declare all variables
   var i: any, tabcontent: any, tablinks: any;
 
@@ -22,25 +22,25 @@ function openCity(evt: Event, cityName: any) {
   idContentTab.style.display = "flex";
   eventTargetTab.className += " active";
 }
-onMounted(() => {});
+const isToggleNoteForm = ref(false);
+const onToggleNoteForm = () => {
+  isToggleNoteForm.value = !isToggleNoteForm.value;
+};
 </script>
 
 <template>
   <div class="charts container">
     <div class="cate">
       <ul class="cate-list tab">
-        <li class="tablinks active" @click="openCity($event, 'All')">Tất cả</li>
-        <li class="tablinks" @click="openCity($event, 'Mindmaps')">
-          Biểu đồ tư duy
+        <li class="tablinks active" @click="toggleTabs($event, 'Notes')">
+          Bản ghi chú
         </li>
-        <li class="tablinks" @click="openCity($event, 'Timeline')">
-          Biểu đồ thời gian
+        <li class="tablinks" @click="toggleTabs($event, 'Craft')">Bản nháp</li>
+        <li class="tablinks" @click="toggleTabs($event, 'Settings')">
+          Cài đặt
         </li>
-        <li class="tablinks" @click="openCity($event, 'Circle')">
-          Biểu đồ tròn
-        </li>
-        <li class="tablinks" @click="openCity($event, 'Column')">
-          Biểu đồ cột
+        <li @click="onToggleNoteForm" class="btn-add">
+          <i class="fas fa-plus"></i>Add new note
         </li>
       </ul>
     </div>
@@ -51,21 +51,15 @@ onMounted(() => {});
     </div> -->
     <div class="store">
       <ul class="cate-mobile tab">
-        <li class="tablinks active" @click="openCity($event, 'All')">Tất cả</li>
-        <li class="tablinks" @click="openCity($event, 'Mindmaps')">
-          Biểu đồ tư duy
+        <li class="tablinks active" @click="toggleTabs($event, 'Notes')">
+          Bản ghi chú
         </li>
-        <li class="tablinks" @click="openCity($event, 'Timeline')">
-          Biểu đồ thời gian
-        </li>
-        <li class="tablinks" @click="openCity($event, 'Circle')">
-          Biểu đồ tròn
-        </li>
-        <li class="tablinks" @click="openCity($event, 'Column')">
-          Biểu đồ cột
+        <li class="tablinks" @click="toggleTabs($event, 'Craft')">Bản nháp</li>
+        <li class="tablinks" @click="toggleTabs($event, 'Settings')">
+          Cài đặt
         </li>
       </ul>
-      <div class="store-list tabcontent" id="All">
+      <div class="store-list tabcontent" id="Notes">
         <div class="item" v-for="n in 5" :key="n">
           <iframe
             src=""
@@ -77,7 +71,7 @@ onMounted(() => {});
           </h5>
         </div>
       </div>
-      <div class="store-list tabcontent" id="Mindmaps">
+      <div class="store-list tabcontent" id="Craft">
         <div class="item" v-for="n in 5" :key="n">
           <iframe
             src=""
@@ -89,11 +83,13 @@ onMounted(() => {});
           </h5>
         </div>
       </div>
-      <div class="store-list tabcontent" id="Timeline">Timeline empty</div>
-      <div class="store-list tabcontent" id="Circle">Circle empty</div>
-      <div class="store-list tabcontent" id="Column">Column empty</div>
+      <div class="store-list tabcontent" id="Settings">Settings empty</div>
     </div>
   </div>
+  <NoteFormSection
+    @onCloseNoteForm="onToggleNoteForm"
+    v-if="isToggleNoteForm"
+  ></NoteFormSection>
 </template>
 
 <style scoped>
@@ -130,6 +126,18 @@ onMounted(() => {});
 .charts .cate .cate-list li:hover {
   color: var(--success-color);
 }
+.charts .cate .cate-list .btn-add {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+.charts .cate .cate-list li.btn-add:hover {
+  border: 1px solid var(--success-color);
+}
+.charts .cate .cate-list .btn-add i {
+  margin-right: 0.2rem;
+}
 .store {
   width: 75%;
   height: 90vh;
@@ -150,7 +158,7 @@ onMounted(() => {});
 .tabcontent {
   display: none;
 }
-#All {
+#Notes {
   display: flex;
 }
 .store-list .item {
@@ -161,6 +169,7 @@ onMounted(() => {});
 .store-list .item iframe {
   border-radius: var(--border-radius);
   width: 100%;
+  cursor: pointer;
 }
 .store-list .item h5 {
   font-size: 1rem;

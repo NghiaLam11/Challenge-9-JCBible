@@ -25,19 +25,19 @@
             <RouterLink to="/bible">Kinh Thánh</RouterLink>
           </li>
           <li>
-            <RouterLink to="/mindmaps">Biểu đồ</RouterLink>
+            <RouterLink to="">Biểu đồ</RouterLink>
           </li>
           <li>
             <RouterLink to="/notes">Ghi chú</RouterLink>
           </li>
           <li>
-            <RouterLink to="/lessons">Bài học</RouterLink>
+            <RouterLink to="">Bài học</RouterLink>
           </li>
         </ul>
         <ul>
-          <li><RouterLink to="/facebook">Facebook</RouterLink></li>
+          <li><RouterLink to="">Facebook</RouterLink></li>
           <li><RouterLink to="/bible">Instagram</RouterLink></li>
-          <li><RouterLink to="/mindmaps">Youtube</RouterLink></li>
+          <li><RouterLink to="">Youtube</RouterLink></li>
         </ul>
       </div>
     </div>

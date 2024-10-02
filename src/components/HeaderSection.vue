@@ -18,20 +18,20 @@
           <li><RouterLink to="/bible">KINH THÁNH</RouterLink></li>
           <li><RouterLink to="/charts">BIỂU ĐỒ</RouterLink></li>
           <li><RouterLink to="/notes">GHI CHÚ</RouterLink></li>
-          <li><RouterLink to="/lessons">BÀI HỌC</RouterLink></li>
+          <li><RouterLink to="">BÀI HỌC</RouterLink></li>
         </ul>
         <div class="nav-more">
           <i class="fas fa-bars"></i>
           <ul class="hidden-nav">
             <li>
-              <RouterLink to="/profile"
+              <RouterLink to=""
                 ><img
                   src="../images/710080731381b1dfe890 (1).jpg"
                   alt="avatar"
                 /><span>Lam Nghia <br />&#127793;</span></RouterLink
               >
             </li>
-            <li><RouterLink to="/profile">Hồ sơ</RouterLink></li>
+            <li><RouterLink to="">Hồ sơ</RouterLink></li>
             <li class="item-mobile">
               <RouterLink to="/">Trang chủ</RouterLink>
             </li>
@@ -39,15 +39,15 @@
               <RouterLink to="/bible">Kinh Thánh</RouterLink>
             </li>
             <li class="item-mobile">
-              <RouterLink to="/mindmaps">Biểu đồ</RouterLink>
+              <RouterLink to="/charts">Biểu đồ</RouterLink>
             </li>
             <li class="item-mobile">
               <RouterLink to="/notes">Ghi chú</RouterLink>
             </li>
             <li class="item-mobile">
-              <RouterLink to="/lessons">Bài học</RouterLink>
+              <RouterLink to="">Bài học</RouterLink>
             </li>
-            <li><RouterLink to="/settings">Cài đặt</RouterLink></li>
+            <li><RouterLink to="">Cài đặt</RouterLink></li>
             <li><a>Đăng xuất</a></li>
           </ul>
         </div>

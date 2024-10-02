@@ -10,7 +10,7 @@
 .dark {
   --text-color: #f8fafc;
   --bg-primary: #0f172a;
-  --bg-secondary: rgb(2, 6, 23);
+  --bg-secondary: #030712;
   --border-color: #cbd5e1;
   --blur-color: rgb(2, 6, 23, 0.3);
   --filter-inverted: invert(100%);
@@ -23,6 +23,6 @@
   --error-color: #dc2626;
   --infor-color: #38bdf8;
   --border-radius: 3px;
-  --font-primary: "Cabin", sans-serif;
+  --font-primary: "Open Sans", sans-serif;
   --font-mono: "Inconsolata", monospace;
 }
